@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    // "strict": true, // 启用严格检查
     "module": "commonjs",
     // 编译出的代码采用的模块规范
     "target": "es2016",
@@ -7,6 +8,7 @@
     "sourceMap": true
     // 输出 SourceMap 方便调试
   },
+  "include": ["./src/*.d.ts"],
   "exclude": [
     // 不编译这些目录里的文件
     "node_modules"

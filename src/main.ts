@@ -39,3 +39,13 @@ console.log(queue.data)
 // 内联注解
 import { InlineType } from "./InlineType"
 InlineType()
+
+// 声明文件
+// 我们在tsconfig里包含所有的d.ts文件，里面declare的类型都可以直接用，不用导入
+let createjs = <CreateJS>{}
+// createjs.Stage() // Stage函数不存在的，但是由于声明CreateJS是any类型，所以编译通过，但是执行报错
+
+let opt: LabelValueOptions = {
+    label: "xx",
+    value: 1,
+}
